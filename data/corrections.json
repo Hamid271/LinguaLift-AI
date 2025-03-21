@@ -1,0 +1,39 @@
+{
+    "verb_tense": [
+      {
+        "incorrect": "I go to the store yesterday",
+        "correct": "I went to the store yesterday",
+        "explanation": "Use past tense for actions that happened in the past."
+      },
+      {
+        "incorrect": "I am here since morning",
+        "correct": "I have been here since morning",
+        "explanation": "Use present perfect for actions that started in the past and continue to the present."
+      }
+    ],
+    "articles": [
+      {
+        "incorrect": "I need advice",
+        "correct": "I need some advice",
+        "explanation": "Use 'some' with uncountable nouns when referring to an unspecified amount."
+      },
+      {
+        "incorrect": "He is teacher",
+        "correct": "He is a teacher",
+        "explanation": "Use the article 'a' before professions."
+      }
+    ],
+    "prepositions": [
+      {
+        "incorrect": "I arrived to the airport",
+        "correct": "I arrived at the airport",
+        "explanation": "Use 'at' with locations like airports, stations, etc."
+      },
+      {
+        "incorrect": "It depends of the weather",
+        "correct": "It depends on the weather",
+        "explanation": "The correct preposition with 'depends' is 'on', not 'of'."
+      }
+    ]
+  }
+ 

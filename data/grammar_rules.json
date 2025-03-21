@@ -1,0 +1,53 @@
+[
+    {
+      "pattern": "i am",
+      "correction": "I am",
+      "explanation": "Remember to capitalize 'I' when referring to yourself."
+    },
+    {
+      "pattern": "dont",
+      "correction": "don't",
+      "explanation": "Don't forget the apostrophe in contractions like 'don't'."
+    },
+    {
+      "pattern": "i go yesterday",
+      "correction": "I went yesterday",
+      "explanation": "Use past tense for actions that happened in the past."
+    },
+    {
+      "pattern": "he don't",
+      "correction": "he doesn't",
+      "explanation": "Use 'doesn't' with he/she/it in the present tense."
+    },
+    {
+      "pattern": "they is",
+      "correction": "they are",
+      "explanation": "Use 'are' with plural subjects like 'they'."
+    },
+    {
+      "pattern": "i have eat",
+      "correction": "I have eaten",
+      "explanation": "After 'have', use the past participle form of the verb."
+    },
+    {
+      "pattern": "more easy",
+      "correction": "easier",
+      "explanation": "For short adjectives, add '-er' instead of using 'more'."
+    },
+    {
+      "pattern": "persons",
+      "correction": "people",
+      "explanation": "The plural of 'person' is usually 'people'."
+    },
+    {
+      "pattern": "i no like",
+      "correction": "I don't like",
+      "explanation": "Use 'don't' for negative statements in present tense."
+    },
+    {
+      "pattern": "i am agree",
+      "correction": "I agree",
+      "explanation": "The verb 'agree' doesn't need 'am' before it."
+    }
+  ]
+  

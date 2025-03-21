@@ -1,0 +1,433 @@
+{
+    "user_name": "gg",
+    "level": "beginner",
+    "current_topic": "Daily Routines",
+    "conversation_history": [
+        {
+            "user": "i like ocean",
+            "timestamp": "2025-03-21 15:25:51"
+        },
+        {
+            "bot": "I see. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:25:51"
+        },
+        {
+            "user": "gg",
+            "timestamp": "2025-03-21 15:25:55"
+        },
+        {
+            "bot": "I understand. How do you feel about it?",
+            "timestamp": "2025-03-21 15:25:55"
+        },
+        {
+            "user": "fg",
+            "timestamp": "2025-03-21 15:25:56"
+        },
+        {
+            "bot": "Thank you for sharing. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:25:56"
+        },
+        {
+            "user": "dfgdfgf",
+            "timestamp": "2025-03-21 15:25:57"
+        },
+        {
+            "bot": "Thank you for sharing. How do you feel about it?",
+            "timestamp": "2025-03-21 15:25:57"
+        },
+        {
+            "user": "hhfg",
+            "timestamp": "2025-03-21 15:25:57"
+        },
+        {
+            "bot": "That's interesting. Why do you think that is?",
+            "timestamp": "2025-03-21 15:25:57"
+        },
+        {
+            "user": "hnfjh",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "bot": "Good point. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "user": "gfhd",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "bot": "That's interesting. Why do you think that is?",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "user": "hdgh",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "bot": "I understand. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:25:58"
+        },
+        {
+            "user": "fghdgh",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "bot": "That's interesting. How do you feel about it?",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "user": "fghng",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "bot": "Thank you for sharing. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "user": "jnfhj",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "bot": "Good point. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:25:59"
+        },
+        {
+            "user": "rtjhth",
+            "timestamp": "2025-03-21 15:26:00"
+        },
+        {
+            "bot": "That's interesting. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:00"
+        },
+        {
+            "user": "erghd",
+            "timestamp": "2025-03-21 15:26:00"
+        },
+        {
+            "bot": "I see. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:00"
+        },
+        {
+            "user": "hn;g[jlgj[pnkgpk",
+            "timestamp": "2025-03-21 15:26:01"
+        },
+        {
+            "bot": "I see. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:01"
+        },
+        {
+            "user": "]fgknjpfghkp[gkh[pgkh[pfgkh",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "bot": "That's interesting. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "user": "fghfg",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "bot": "I see. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "user": "hfg",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "bot": "I understand. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:02"
+        },
+        {
+            "user": "hfg",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "bot": "That's interesting. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "user": "hf",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "bot": "Good point. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "user": "ghfg",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "bot": "Good point. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "user": "h",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "bot": "That's interesting. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "user": "fghfgh",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "bot": "Good point. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:26:03"
+        },
+        {
+            "user": "fgh",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "I see. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "fgh",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "Good point. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "fgh",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "Good point. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "fgh",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "Good point. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "fg",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "That's interesting. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "hg",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "bot": "I see. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:04"
+        },
+        {
+            "user": "hfg",
+            "timestamp": "2025-03-21 15:26:05"
+        },
+        {
+            "bot": "Good point. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:05"
+        },
+        {
+            "user": "hgh",
+            "timestamp": "2025-03-21 15:26:05"
+        },
+        {
+            "bot": "I understand. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:05"
+        },
+        {
+            "user": "dfdf",
+            "timestamp": "2025-03-21 15:26:13"
+        },
+        {
+            "bot": "Good point. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:13"
+        },
+        {
+            "user": "hot",
+            "timestamp": "2025-03-21 15:26:16"
+        },
+        {
+            "bot": "Thank you for sharing. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:16"
+        },
+        {
+            "user": "rainy",
+            "timestamp": "2025-03-21 15:26:19"
+        },
+        {
+            "bot": "I understand. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:19"
+        },
+        {
+            "user": "how does it work",
+            "timestamp": "2025-03-21 15:26:26"
+        },
+        {
+            "bot": "Thank you for sharing. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:26"
+        },
+        {
+            "user": "pasta",
+            "timestamp": "2025-03-21 15:26:31"
+        },
+        {
+            "bot": "That's interesting. Why do you think that is?",
+            "timestamp": "2025-03-21 15:26:31"
+        },
+        {
+            "user": "strinly thing",
+            "timestamp": "2025-03-21 15:26:40"
+        },
+        {
+            "bot": "Thank you for sharing. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:40"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:44"
+        },
+        {
+            "bot": "Thank you for sharing. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:44"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:45"
+        },
+        {
+            "bot": "Good point. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:45"
+        },
+        {
+            "user": "its hotits hot",
+            "timestamp": "2025-03-21 15:26:46"
+        },
+        {
+            "bot": "That's interesting. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:46"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:47"
+        },
+        {
+            "bot": "That's interesting. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:26:47"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:47"
+        },
+        {
+            "bot": "Thank you for sharing. Why do you think that is?",
+            "timestamp": "2025-03-21 15:26:47"
+        },
+        {
+            "user": "its hotits hot",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "bot": "That's interesting. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "bot": "I understand. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "bot": "I understand. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:26:48"
+        },
+        {
+            "user": "its hot",
+            "timestamp": "2025-03-21 15:26:49"
+        },
+        {
+            "bot": "That's interesting. How do you feel about it?",
+            "timestamp": "2025-03-21 15:26:49"
+        },
+        {
+            "user": "f",
+            "timestamp": "2025-03-21 15:27:12"
+        },
+        {
+            "bot": "Thank you for sharing. Can you tell me more about that?",
+            "timestamp": "2025-03-21 15:27:12"
+        },
+        {
+            "user": "f",
+            "timestamp": "2025-03-21 15:27:14"
+        },
+        {
+            "bot": "I understand. Why do you think that is?",
+            "timestamp": "2025-03-21 15:27:14"
+        },
+        {
+            "user": "f",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "That's interesting. How do you feel about it?",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "user": "f",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "I see. How do you feel about it?",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "user": "f",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "I understand. What else can you share about this topic?",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "user": "fg",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "I see. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "user": "df",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "I understand. Do you have any questions about this?",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "user": "g",
+            "timestamp": "2025-03-21 15:27:15"
+        },
+        {
+            "bot": "Thank you for sharing. Why do you think that is?",
+            "timestamp": "2025-03-21 15:27:15"
+        }
+    ],
+    "errors_made": [],
+    "session_start": "2025-03-21 15:25:40"
+}

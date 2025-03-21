@@ -1,0 +1,67 @@
+{
+    "beginner": [
+      {
+        "name": "Daily Routines",
+        "starter_question": "What do you do every morning after you wake up?",
+        "vocabulary": ["wake up", "brush teeth", "eat breakfast", "get dressed", "go to work/school", "lunch", "dinner", "sleep"],
+        "follow_up_questions": [
+          "What time do you usually wake up?",
+          "Do you eat breakfast every day?",
+          "How do you go to work or school?"
+        ]
+      },
+      {
+        "name": "Family",
+        "starter_question": "How many people are in your family?",
+        "vocabulary": ["mother", "father", "sister", "brother", "aunt", "uncle", "grandmother", "grandfather", "cousin"],
+        "follow_up_questions": [
+          "Do you have any brothers or sisters?",
+          "What does your mother/father do?",
+          "Who are you closest to in your family?"
+        ]
+      },
+      {
+        "name": "Food",
+        "starter_question": "What is your favorite food?",
+        "vocabulary": ["breakfast", "lunch", "dinner", "fruit", "vegetable", "meat", "drink", "snack", "sweet", "spicy"],
+        "follow_up_questions": [
+          "Can you cook?",
+          "What foods do you not like?",
+          "What is a typical breakfast in your country?"
+        ]
+      },
+      {
+        "name": "Weather",
+        "starter_question": "How is the weather today?",
+        "vocabulary": ["sunny", "rainy", "cloudy", "windy", "hot", "cold", "warm", "cool", "snow", "storm"],
+        "follow_up_questions": [
+          "What season do you like best?",
+          "What do you do when it rains?",
+          "Is it usually hot or cold where you live?"
+        ]
+      }
+    ],
+    "intermediate": [
+      {
+        "name": "Hobbies",
+        "starter_question": "What do you like to do in your free time?",
+        "vocabulary": ["read", "watch movies", "play sports", "listen to music", "cook", "travel", "draw", "dance", "photography"],
+        "follow_up_questions": [
+          "How often do you practice your hobby?",
+          "When did you start this hobby?",
+          "Do your friends share your interests?"
+        ]
+      },
+      {
+        "name": "Travel",
+        "starter_question": "Have you ever traveled to another country?",
+        "vocabulary": ["country", "city", "trip", "vacation", "airport", "hotel", "passport", "suitcase", "tourist", "souvenir"],
+        "follow_up_questions": [
+          "Where would you like to travel next?",
+          "Do you prefer the beach or the mountains?",
+          "What was your favorite travel experience?"
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaLift AI - Practice English Conversations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #4285f4;
+            color: white;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .chat-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .chat-header {
+            background-color: #f1f3f4;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .chat-body {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            position: relative;
+            clear: both;
+        }
+        
+        .user-message {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            float: right;
+            border-bottom-right-radius: 4px;
+        }
+        
+        .bot-message {
+            background-color: #f1f1f1;
+            color: #333;
+            float: left;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .correction {
+            background-color: #fff8e1;
+            border-left: 3px solid #ffc107;
+            padding: 8px 12px;
+            margin-top: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .chat-input button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin-left: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+        
+        .chat-input button:hover {
+            background-color: #3367d6;
+        }
+        
+        .topic-section {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .topic-header h3 {
+            margin: 0;
+        }
+        
+        .change-topic {
+            background-color: #34a853;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        
+        .vocabulary-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .vocabulary-item {
+            background-color: #e8f5e9;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            color: #1b5e20;
+        }
+        
+        .welcome-screen {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .welcome-screen h2 {
+            margin-bottom: 20px;
+        }
+        
+        .name-input {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            width: 250px;
+            margin-right: 10px;
+        }
+        
+        .start-button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .error-message {
+            background-color: #ffebee;
+            color: #c62828;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LinguaLift AI</h1>
+            <div class="subtitle">Practice your English with a friendly AI companion</div>
+        </header>
+        
+        <div id="welcome-screen" class="welcome-screen">
+            <h2>Welcome to LinguaLift AI!</h2>
+            <p>I'm here to help you practice English. Let's have a conversation!</p>
+            <div>
+                <input type="text" id="user-name" class="name-input" placeholder="What's your name?">
+                <button id="start-chat" class="start-button">Start Chatting</button>
+            </div>
+            <div id="error-container"></div>
+        </div>
+        
+        <div id="chat-interface" class="hidden">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Chat with LinguaLift AI</h2>
+                    <div id="level-indicator">Level: Beginner</div>
+                </div>
+                <div id="chat-body" class="chat-body">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type your message here...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+            
+            <div class="topic-section">
+                <div class="topic-header">
+                    <h3>Current Topic: <span id="current-topic">Daily Routines</span></h3>
+                    <button id="change-topic" class="change-topic">New Topic</button>
+                </div>
+                <div>
+                    <p>Useful vocabulary:</p>
+                    <div id="vocabulary-list" class="vocabulary-list">
+                        <!-- Vocabulary items will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM elements
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const chatInterface = document.getElementById('chat-interface');
+            const userNameInput = document.getElementById('user-name');
+            const startChatButton = document.getElementById('start-chat');
+            const chatBody = document.getElementById('chat-body');
+            const messageInput = document.getElementById('message-input');
+            const sendButton = document.getElementById('send-button');
+            const changeTopicButton = document.getElementById('change-topic');
+            const currentTopicSpan = document.getElementById('current-topic');
+            const vocabularyList = document.getElementById('vocabulary-list');
+            const errorContainer = document.getElementById('error-container');
+            
+            // Mock API for testing (if backend is not ready)
+            const useMockAPI = false; // Set to true to use mock data, false to use real API
+            
+            // Start chat when button is clicked
+            startChatButton.addEventListener('click', function() {
+                const userName = userNameInput.value.trim() || 'friend';
+                startChat(userName);
+            });
+            
+            // Allow Enter key to submit name
+            userNameInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const userName = userNameInput.value.trim() || 'friend';
+                    startChat(userName);
+                }
+            });
+            
+            // Start chat function
+            function startChat(userName) {
+                // Clear any previous errors
+                errorContainer.innerHTML = '';
+                
+                if (useMockAPI) {
+                    // Use mock data for testing
+                    simulateStartSession(userName);
+                } else {
+                    // Use real API
+                    fetch('/api/start_session', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ user_name: userName })
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok: ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Hide welcome screen, show chat interface
+                        welcomeScreen.classList.add('hidden');
+                        chatInterface.classList.remove('hidden');
+                        
+                        // Add bot messages
+                        addBotMessage(data.message);
+                        addBotMessage(data.topic_suggestion);
+                        
+                        // Update topic and vocabulary
+                        updateTopic();
+                    })
+                    .catch(error => {
+                        console.error('Error starting session:', error);
+                        showError('Could not connect to the server. Please try again later.');
+                    });
+                }
+            }
+            
+            // Send message when button is clicked
+            sendButton.addEventListener('click', sendMessage);
+            
+            // Allow Enter key to send message
+            messageInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+            
+            // Change topic when button is clicked
+            changeTopicButton.addEventListener('click', function() {
+                if (useMockAPI) {
+                    simulateChangeTopic();
+                } else {
+                    fetch('/api/change_topic', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({})
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        addBotMessage(data.topic_suggestion);
+                        updateTopic();
+                    })
+                    .catch(error => {
+                        console.error('Error changing topic:', error);
+                        addBotMessage("I'm sorry, I couldn't change the topic right now. Let's continue with our current conversation.");
+                    });
+                }
+            });
+            
+            // Send message function
+            function sendMessage() {
+                const messageText = messageInput.value.trim();
+                if (!messageText) return;
+                
+                // Add user message to chat
+                addUserMessage(messageText);
+                
+                // Clear input field
+                messageInput.value = '';
+                
+                if (useMockAPI) {
+                    simulateSendMessage(messageText);
+                } else {
+                    // Send to API
+                    fetch('/api/send_message', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ message: messageText })
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Add bot response
+                        addBotMessage(data.response);
+                    })
+                    .catch(error => {
+                        console.error('Error sending message:', error);
+                        addBotMessage("I'm sorry, I didn't catch that. Could you please try again?");
+                    });
+                }
+            }
+            
+            // Add user message to chat
+            function addUserMessage(text) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user-message';
+                messageDiv.textContent = text;
+                chatBody.appendChild(messageDiv);
+                scrollToBottom();
+            }
+            
+            // Add bot message to chat
+            function addBotMessage(text) {
+                // Check if there's a correction section
+                const parts = text.split('\n\n');
+                
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message bot-message';
+                
+                if (parts.length > 1 && parts[1].includes("instead of")) {
+                    // Main message
+                    messageDiv.textContent = parts[0];
+                    
+                    // Correction
+                    const correctionDiv = document.createElement('div');
+                    correctionDiv.className = 'correction';
+                    correctionDiv.textContent = parts[1];
+                    messageDiv.appendChild(correctionDiv);
+                } else {
+                    messageDiv.textContent = text;
+                }
+                
+                chatBody.appendChild(messageDiv);
+                scrollToBottom();
+            }
+            
+            // Scroll chat to bottom
+            function scrollToBottom() {
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+            
+            // Update topic and vocabulary
+            function updateTopic() {
+                if (useMockAPI) {
+                    simulateGetVocabulary();
+                } else {
+                    fetch('/api/get_vocabulary')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        currentTopicSpan.textContent = data.topic;
+                        
+                        // Update vocabulary list
+                        vocabularyList.innerHTML = '';
+                        data.vocabulary.forEach(word => {
+                            const vocabItem = document.createElement('div');
+                            vocabItem.className = 'vocabulary-item';
+                            vocabItem.textContent = word;
+                            vocabularyList.appendChild(vocabItem);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error getting vocabulary:', error);
+                    });
+                }
+            }
+            
+            // Show error message
+            function showError(message) {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.textContent = message;
+                errorContainer.innerHTML = '';
+                errorContainer.appendChild(errorDiv);
+            }
+            
+            // Mock API functions (for testing)
+            function simulateStartSession(userName) {
+                welcomeScreen.classList.add('hidden');
+                chatInterface.classList.remove('hidden');
+                
+                const greeting = `Hello, ${userName}! I am LinguaLift AI. How are you today?`;
+                const topicSuggestion = "Let's talk about Daily Routines. What do you do every morning after you wake up?";
+                
+                setTimeout(() => {
+                    addBotMessage(greeting);
+                }, 300);
+                
+                setTimeout(() => {
+                    addBotMessage(topicSuggestion);
+                    currentTopicSpan.textContent = "Daily Routines";
+                    updateVocabularyList(["wake up", "brush teeth", "eat breakfast", "get dressed", "go to work/school", "lunch", "dinner", "sleep"]);
+                }, 800);
+            }
+            
+            function simulateSendMessage(message) {
+                setTimeout(() => {
+                    // Generate a mock response based on the message
+                    let response;
+                    
+                    if (message.toLowerCase().includes("how are you")) {
+                        response = "I'm doing well, thank you for asking! How about you?";
+                    }
+                    else if (message.toLowerCase().includes("i am good")) {
+                        response = "I'm glad to hear that! Do you have a morning routine that you follow every day?";
+                    }
+                    else if (message.toLowerCase().includes("i dont")) {
+                        response = "I see. Everyone has different habits.\n\nJust a tiny tip: Try saying 'I don't' instead of 'i dont'. Don't forget the apostrophe in contractions like 'don't'.";
+                    }
+                    else {
+                        response = "That's interesting. Can you tell me more about that?";
+                    }
+                    
+                    addBotMessage(response);
+                }, 800);
+            }
+            
+            function simulateChangeTopic() {
+                const topics = ["Family", "Food", "Weather", "Hobbies", "Travel"];
+                const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+                
+                let topicSuggestion;
+                let vocabWords;
+                
+                switch (randomTopic) {
+                    case "Family":
+                        topicSuggestion = "Let's talk about Family. How many people are in your family?";
+                        vocabWords = ["mother", "father", "sister", "brother", "aunt", "uncle", "grandmother", "grandfather", "cousin"];
+                        break;
+                    case "Food":
+                        topicSuggestion = "Let's talk about Food. What is your favorite food?";
+                        vocabWords = ["breakfast", "lunch", "dinner", "fruit", "vegetable", "meat", "drink", "snack", "sweet", "spicy"];
+                        break;
+                    case "Weather":
+                        topicSuggestion = "Let's talk about Weather. How is the weather today?";
+                        vocabWords = ["sunny", "rainy", "cloudy", "windy", "hot", "cold", "warm", "cool", "snow", "storm"];
+                        break;
+                    case "Hobbies":
+                        topicSuggestion = "Let's talk about Hobbies. What do you like to do in your free time?";
+                        vocabWords = ["read", "watch movies", "play sports", "listen to music", "cook", "travel", "draw", "dance", "photography"];
+                        break;
+                    case "Travel":
+                        topicSuggestion = "Let's talk about Travel. Have you ever traveled to another country?";
+                        vocabWords = ["country", "city", "trip", "vacation", "airport", "hotel", "passport", "suitcase", "tourist", "souvenir"];
+                        break;
+                }
+                
+                setTimeout(() => {
+                    addBotMessage(topicSuggestion);
+                    currentTopicSpan.textContent = randomTopic;
+                    updateVocabularyList(vocabWords);
+                }, 500);
+            }
+            
+            function simulateGetVocabulary() {
+                const topic = currentTopicSpan.textContent;
+                let vocabWords;
+                
+                switch (topic) {
+                    case "Daily Routines":
+                        vocabWords = ["wake up", "brush teeth", "eat breakfast", "get dressed", "go to work/school", "lunch", "dinner", "sleep"];
+                        break;
+                    case "Family":
+                        vocabWords = ["mother", "father", "sister", "brother", "aunt", "uncle", "grandmother", "grandfather", "cousin"];
+                        break;
+                    case "Food":
+                        vocabWords = ["breakfast", "lunch", "dinner", "fruit", "vegetable", "meat", "drink", "snack", "sweet", "spicy"];
+                        break;
+                    case "Weather":
+                        vocabWords = ["sunny", "rainy", "cloudy", "windy", "hot", "cold", "warm", "cool", "snow", "storm"];
+                        break;
+                    case "Hobbies":
+                        vocabWords = ["read", "watch movies", "play sports", "listen to music", "cook", "travel", "draw", "dance", "photography"];
+                        break;
+                    case "Travel":
+                        vocabWords = ["country", "city", "trip", "vacation", "airport", "hotel", "passport", "suitcase", "tourist", "souvenir"];
+                        break;
+                    default:
+                        vocabWords = ["hello", "goodbye", "thank you", "please", "yes", "no", "help", "learn", "practice", "speak"];
+                }
+                
+                updateVocabularyList(vocabWords);
+            }
+            
+            function updateVocabularyList(words) {
+                vocabularyList.innerHTML = '';
+                words.forEach(word => {
+                    const vocabItem = document.createElement('div');
+                    vocabItem.className = 'vocabulary-item';
+                    vocabItem.textContent = word;
+                    vocabularyList.appendChild(vocabItem);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
